@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>상품 목록</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- START : header -->
+	<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+	
+	<!-- START : container -->
+	<div class="container" style="max-width: 600px">
+		<div class="py-5 text-center">
+			<h2>상품 목록</h2>
+		</div>
+		<hr class="my-4">
+
+		<!-- TABLE -->
+		<div>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>상품명</th>
+						<th>가격</th>
+						<th>수량</th>
+					</tr>
+				</thead>
+				<tbody class="table-group-divider">
+					<tr>
+						<td><a href="item.html">회원ID</a></td>
+						<td><a href="item.html">상품명</a></td>
+						<td>10000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td><a href="item.html">회원ID</a></td>
+						<td><a href="item.html">상품명</a></td>
+						<td>10000</td>
+						<td>10</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- button -->
+		<div class="row">
+			<div class="d-grid gap-2">
+				<button class="btn btn-secondary btn-lg float-center" type="button" onclick="location.href='addForm.html'">상품 등록</button>
+			</div>
+		</div>
+	</div>
+	<!-- END : container -->
+
+	<!-- START : footer -->
+	<div class="text-bg-dark position-absolute bottom-0 w-100">
+		<footer class="py-3 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+			</ul>
+			<p class="text-center text-white">&copy; 2022 Company, Inc</p>
+		</footer>
+	</div>
+	<!-- END : footer -->
+
+</body>
+</html>

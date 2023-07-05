@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>상품 상세</title>
+<link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+	<!-- START : header -->
+	<header class="p-3 text-bg-dark">
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+					<li><a href="/store/items" class="nav-link px-2 text-white">상품목록</a></li>
+					<li><a href="/store/items/add" class="nav-link px-2 text-white">상품등록</a></li>
+				</ul>
+
+				<form action="/store/items/search" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+					<div class="row">
+						<input type="search" name="search" class="form-control form-control-dark col mx-2" placeholder="상품명 입력하세요" aria-label="Search">
+						<button type="submit" class="btn btn-warning col-3">검색</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<!-- START : container -->
+	<div class="container" style="max-width: 600px">
+		<div class="py-5 text-center">
+			<h2>상품 상세</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-2 fw-bold">
+				<label for="itemId">상품 ID</label>
+			</div>
+			<div class="col">
+				<input class="form-control" type="text" id="itemId" name="itemId" value="1" th:value="${item.id}" readonly disabled>
+			</div>
+		</div>
+
+		<div class="row my-2">
+			<div class="col-2 fw-bolder">
+				<label for="itemName">상품명</label>
+			</div>
+			<div class="col">
+				<input class="form-control" type="text" id="itemName" name="itemName" value="상품A" th:value="${item.itemName}" readonly disabled>
+			</div>
+		</div>
+
+		<div class="row my-2">
+			<div class="col-2 fw-bolder">
+				<label for="price">가격</label>
+			</div>
+			<div class="col">
+				<input class="form-control" type="text" id="price" name="price" value="10000" th:value="${item.price}" readonly disabled>
+			</div>
+		</div>
+
+		<div class="row my-2">
+			<div class="col-2 fw-bolder">
+				<label for="quantity">수량</label>
+			</div>
+			<div class="col">
+				<input class="form-control" type="text" id="quantity" name="quantity" th:value="${item.quantity}" value="10" readonly disabled>
+			</div>
+		</div>
+
+		<hr class="my-4">
+
+		<div class="row">
+			<div class="col">
+				<button class="btn btn-outline-dark btn-lg w-100" type="button" onclick="location.href='editForm.html'"
+					th:onclick="|location.href='@{/store/items/{itemID}/edit(itemID=${item.id})}'|"
+				>상품 수정</button>
+			</div>
+			<div class="col">
+				<button class="btn btn-secondary btn-lg w-100" type="button" onclick="location.href='items.html'" th:onclick="|location.href='@{/store/items}'|">목록으로</button>
+			</div>
+		</div>
+	</div>
+	<!-- END : container -->
+
+	<!-- START : footer -->
+	<div class="text-bg-dark position-absolute bottom-0 w-100">
+		<footer class="my-2">
+			<ul class="nav justify-content-center pb-3 mb-3">
+				<li class="nav-item"><a href="/" class="nav-link px-2 text-white">Home</a></li>
+				<li class="nav-item"><a href="/store/items" class="nav-link px-2 text-white">상품목록</a></li>
+				<li class="nav-item"><a href="/store/items/add" class="nav-link px-2 text-white">상품등록</a></li>
+			</ul>
+			<p class="text-center text-white">&copy;행복한 마켓 Crop.</p>
+		</footer>
+	</div>
+	<!-- END : footer -->
+
+</body>
+</html>
